@@ -1,13 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
+
 const Card = styled.div`
-    border: solid blue;
+    border: solid #f062928c;
     width: 30vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    font-family: monospace;
+    border-radius: 3%;
+    margin: 1%;
+    color: #21020ccc;
 
     img{
     width: 50%;
