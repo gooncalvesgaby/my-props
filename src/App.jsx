@@ -1,11 +1,19 @@
 import React from "react"
-import ComponentProps from "./Components/ComponentProps.jsx"
+import ComponentProps from "./components/ComponentProps.jsx"
 import styled from "styled-components"
+import {createGlobalStyle} from "styled-components"
 import Kinderovo from "./assets/kinder.webp"
 import Passatempo from "./assets/passatempo.webp"
 import Prestigio from "./assets/prestigio.webp"
 import Sensacao from "./assets/sensacao.jpg"
 
+const GlobalStyle = createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+`
 
 const Section = styled.section`
   border: solid red;
@@ -17,6 +25,7 @@ function App() {
 
   return (
     <Section>
+    <GlobalStyle/>
 
     <ComponentProps produto="Ovo Kinder" valor="50$" imagem={Kinderovo}>
       <h2>Kinder ovo tem surpresa com brinquedo!</h2>
@@ -39,6 +48,7 @@ function App() {
     </ComponentProps>    
 
     </Section>
+
   )
 }
 
